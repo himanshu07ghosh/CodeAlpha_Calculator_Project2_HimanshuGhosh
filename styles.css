@@ -1,0 +1,122 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: gradient 10s ease infinite; /* Dynamic gradient animation */
+}
+
+@keyframes gradient {
+    0% {
+        background-color: #ff6a6a;
+    }
+    25% {
+        background-color: #6a9eff;
+    }
+    50% {
+        background-color: #6af0ff;
+    }
+    75% {
+        background-color: #6aef6a;
+    }
+    100% {
+        background-color: #ff6a6a;
+    }
+}
+
+.calculator {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px; /* Set a maximum width to prevent excessive stretching */
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 48px; /* Increased font size for display */
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 5px; /* Reduced space below display */
+    padding: 10px;
+    border: 2px solid #0078d4;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.buttons {
+    display: flex;
+}
+
+.number-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.operator-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; /* Make the operator buttons take up remaining space */
+}
+
+
+
+.btn {
+    padding: 20px;
+    font-size: 28px; 
+    font-weight: bold; 
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: #0078d4;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.2s;
+    width: 100%; /* Make all buttons take full width */
+}
+
+.btn:hover {
+    background-color: #0056a1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+}
+
+.operator {
+    background-color: #ffab40; /* Distinct color for operator buttons */
+}
+
+.operator:hover {
+    background-color: #c68b30; /* Darker shade on hover */
+}
+
+.equal {
+    background-color: #28a745;
+    padding: 30px;
+    font-size: 40px;
+    border-radius: 30px;
+    flex: 1; /* Make the equal button take up remaining space */
+}
+
+.equal:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.ac {
+    background-color: #ff6b6b; /* Distinct color for AC button */
+    padding: 30px; /* Larger padding for AC button */
+    font-size: 35px; /* Font size for AC button */
+    border-radius: 8px;
+}
+
+.backspace {
+    background-color: #ffab40; /* Color for backspace button */
+}
